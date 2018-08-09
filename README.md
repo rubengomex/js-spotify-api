@@ -3,6 +3,7 @@
 [![docs](http://inch-ci.org/github/rubengomex/js-spotify-api.svg?branch=master)](https://rubengomex.github.io/js-spotify-api/)
 [![travis build](https://img.shields.io/travis/rubengomex/js-spotify-api.svg)](https://travis-ci.org/rubengomex/js-spotify-api)
 [![codecov coverage](https://img.shields.io/codecov/c/github/rubengomex/js-spotify-api.svg)](https://codecov.io/gh/rubengomex/js-spotify-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a30f3e3286b4c0406f5f/maintainability)](https://codeclimate.com/github/rubengomex/js-spotify-api/maintainability)
 [![downloads](https://img.shields.io/npm/dm/js-spotify-api.svg)](https://npm-stat.com/charts.html?package=js-spotify-api&from=2017-08-11)
 [![node version](https://img.shields.io/node/v/js-spotify-api.svg)](https://nodejs.org)
 [![MIT Licence](https://img.shields.io/github/license/rubengomex/js-spotify-api.svg)](https://opensource.org/licenses/MIT)
