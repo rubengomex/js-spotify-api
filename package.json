@@ -1,6 +1,6 @@
 {
   "name": "js-spotify-api",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -26,7 +26,7 @@
     "coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "precommit": "npm run test:coverage && npm run check:coverage",
+    "precommit": "npm run test:coverage",
     "prepush": "npm run lint",
     "prepublish": "npm run build:all"
   },
