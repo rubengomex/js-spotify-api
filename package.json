@@ -25,7 +25,7 @@
     "check:coverage": "nyc check-coverage --lines 75 --functions 75 --branches 75 --statements 75",
     "coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "commit": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "deploy": "npm publish",
     "precommit": "npm run test:coverage",
     "prepush": "npm run lint",
     "prepublish": "npm run build:all"
