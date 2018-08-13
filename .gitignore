@@ -1,5 +1,11 @@
+# Local
 .DS_Store
 
+# Build folders
+dist
+lib
+
+# docs
 docs
 # IntelliJ
 .idea

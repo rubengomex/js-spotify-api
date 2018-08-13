@@ -1,9 +1,8 @@
 import { join } from 'path'
 
-const include = join(__dirname, 'src')
-
 export default {
   entry: './index',
+  mode: 'development',
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
@@ -11,6 +10,13 @@ export default {
   },
   devtool: 'source-map',
   module: {
-    loaders: [{ test: /\.js$/, loader: 'babel-loader', include }]
+    rules: [
+      {
+        test: /\.js$/,
+        use: { loader: 'babel-loader' },
+        include: join(__dirname, 'src'),
+        exclude: /(node_modules|bower_components)/
+      }
+    ]
   }
 }

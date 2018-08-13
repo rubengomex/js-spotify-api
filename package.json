@@ -15,6 +15,7 @@
     "build:docs": "npm run clean:docs && npm run build:api-references && jsdoc -c conf.json -R README.md",
     "build:umd": "webpack --output-filename js-spotify-api.umd.js",
     "build:umd:min": "webpack --output-filename js-spotify-api.umd.min.js -p",
+    "build:umd:watch": "npm run build:umd -- --watch",
     "build:all": "npm run build:docs && npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "eslint ./src/**/*.js",
     "watch:lint": "esw -w --cache --clear --color",
@@ -92,7 +93,8 @@
     "semantic-release": "^15.9.6",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0",
-    "webpack": "^4.16.5"
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0"
