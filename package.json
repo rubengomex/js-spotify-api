@@ -1,6 +1,6 @@
 {
   "name": "js-spotify-api",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "engines": {
     "node": ">=6.0.0"
   },
@@ -28,7 +28,9 @@
     "deploy": "npm publish",
     "precommit": "npm run test:coverage",
     "prepush": "npm run lint",
-    "prepublish": "npm run build:all"
+    "prepublish": "npm run build:all",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib",
@@ -48,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git@github.com/rubengomex/js-spotify-api.git"
+    "url": "https://github.com/rubengomex/js-spotify-api.git"
   },
   "keywords": [
     "js",
@@ -93,11 +95,12 @@
     "nyc": "^12.0.2",
     "opener": "^1.4.3",
     "rimraf": "^2.6.2",
-    "semantic-release": "^15.9.6",
+    "semantic-release": "^15.9.8",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "travis-deploy-once": "^5.0.2"
   },
   "dependencies": {
     "axios": "^0.18.0"
