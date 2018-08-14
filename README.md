@@ -12,13 +12,100 @@
 
 A javascript wrapper for [Spotify's Web API](https://developer.spotify.com/web-api/).
 
-## Features
-
 ## Browser Support
 
 | ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Edge](https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | 67+ ✔                                                                                    | 52+ ✔                                                                                       | 16+ ✔                                                                                    | 54+ ✔                                                                                 | 16+ ✔                                                                              | 11 ✔                                                                                                                         |
+
+## Table of Contents
+
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Api](#api)
+
+## Features
+
+The library includes helper functions to do the following:
+
+> **Note:** Most of them are still in progress to make (sections marked with TODO)
+
+#### Music metadata
+
+- Albums, artists, and tracks
+- Audio features and analysis for tracks (**todo**)
+- Albums for a specific artist **todo**
+- Top tracks for a specific artist **todo**
+- Artists similar to a specific artist **todo**
+
+#### Profiles **todo**
+
+- User's emails, product type, display name, birthdate, image
+
+#### Search
+
+- albums
+- artists, tracks, and playlists (**todo**)
+
+#### Playlist manipulation (**todo**)
+
+- Get a user's playlists
+- Create playlists
+- Change playlist details
+- Add tracks to a playlist
+- Remove tracks from a playlist
+- Replace tracks in a playlist
+- Reorder tracks in a playlist
+
+#### Your Music library (**todo**)
+
+- Add, remove, and get tracks and albums that are in the signed in user's Your Music library
+- Check if a track or album is in the signed in user's Your Music library
+
+#### Personalization (**todo**)
+
+- Get a user’s top artists and tracks based on calculated affinity
+
+#### Browse (**todo**)
+
+- Get New Releases
+- Get Featured Playlists
+- Get a List of Categories
+- Get a Category
+- Get a Category's Playlists
+- Get recommendations based on seeds
+- Get available genre seeds
+
+#### Follow (**todo**)
+
+- Follow and unfollow users
+- Follow and unfollow artists
+- Check if the logged in user follows a user or artist
+- Follow a playlist
+- Unfollow a playlist
+- Get followed artists
+- Check if users are following a Playlist
+
+#### Player (**todo**)
+
+- Get a user's available devices
+- Get information about the user's current playback
+- Get current user’s recently played tracks
+- Transfer a user's playback
+- Resume a user's playback
+- Skip a user's playback to next track
+- Skip a user's playback to previous track
+- Set a user's shuffle mode
+- Set a user's repeat mode
+- Set volume
+- Seek playback to a given position
+
+All methods require authentication, which can be done using these flows:
+
+- [Client credentials flow](http://tools.ietf.org/html/rfc6749#section-4.4) (Application-only authentication)
+- [Authorization code grant](http://tools.ietf.org/html/rfc6749#section-4.1) (Signed by user)
 
 ## Dependencies
 
@@ -54,7 +141,7 @@ You can run the tests by running the follow command:
 
 > **Note:** You only can run the tests if you clone the repository from github
 
-## How to use
+## Usage
 
 ### ES6
 
@@ -129,6 +216,13 @@ async function getUser() {
   - [Parameters](#parameters)
   - [getAlbums](#getalbums)
     - [Parameters](#parameters-1)
+    - [Examples](#examples)
+  - [getAlbum](#getalbum)
+    - [Parameters](#parameters-2)
+    - [Examples](#examples-1)
+  - [getAlbumTracks](#getalbumtracks)
+    - [Parameters](#parameters-3)
+    - [Examples](#examples-2)
 
 ### Spotify
 
@@ -149,4 +243,73 @@ Gets albums info based on albums ids specified
 
 - `opts` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Specifies the options object
   - `opts.ids` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** Specifies the spotify albums ids
-    returns {Promise&lt;object\[]>} The albums information
+
+##### Examples
+
+```javascript
+Albums
+[{
+   album_type: 'album',
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   external_ids: { upc: '886445352382' },
+   external_urls: { spotify: 'https://open.spotify.com/album/{albumId}'}
+   ...
+}]
+```
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>>** The albums information
+
+#### getAlbum
+
+Gets album info based on the id of the album
+
+##### Parameters
+
+- `opts` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Specifies the options object
+  - `opts.id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Specifies the spotify album id
+
+##### Examples
+
+```javascript
+Album
+{
+   album_type: 'album',
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   external_ids: { upc: '886445352382' },
+   external_urls: { spotify: 'https://open.spotify.com/album/{albumId}'}
+   ...
+}
+```
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>** The album information
+
+#### getAlbumTracks
+
+Gets the tracks of the album info based on the id of the album
+
+##### Parameters
+
+- `opts` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Specifies the options object
+  - `opts.id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** Specifies the spotify album id
+  - `opts.skip` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Specifies the offset of the items to retrieve (optional, default `0`)
+  - `opts.limit` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Specifies the limit of items to retrieve (optional, default `20`)
+
+##### Examples
+
+```javascript
+Tracks
+[{
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   disc_number: 1,
+   track_number: 1
+   ...
+}]
+```
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>>** The album tracks information
