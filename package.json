@@ -24,13 +24,13 @@
     "test:coverage": "nyc npm test",
     "check:coverage": "nyc check-coverage --lines 75 --functions 75 --branches 75 --statements 75",
     "coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "commit": "git-cz",
+    "commit": "npx git-cz",
     "deploy": "npm publish",
     "precommit": "npm run test:coverage",
     "prepush": "npm run lint",
     "prepublish": "npm run build:all",
-    "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "travis-deploy-once": " npx travis-deploy-once",
+    "semantic-release": "npx semantic-release"
   },
   "files": [
     "lib",
@@ -45,8 +45,10 @@
       "src/**/*.spec.js"
     ]
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
@@ -79,6 +81,7 @@
     "chai-as-promised": "^7.1.1",
     "codecov": "^3.0.4",
     "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "documentation": "^8.1.0",
     "eslint": "^5.3.0",
     "eslint-config-standard": "^11.0.0",
@@ -98,9 +101,9 @@
     "semantic-release": "^15.9.8",
     "sinon": "^6.1.4",
     "sinon-chai": "^3.2.0",
+    "travis-deploy-once": "^5.0.2",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0",
-    "travis-deploy-once": "^5.0.2"
+    "webpack-cli": "^3.1.0"
   },
   "dependencies": {
     "axios": "^0.18.0"

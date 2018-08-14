@@ -5,10 +5,7 @@ cache:
 notifications:
   email: false
 node_js:
-  - '10'
-  - '9'
   - '8'
-  - '6'
 before_script:
   - npm run build:all
 after_success:
