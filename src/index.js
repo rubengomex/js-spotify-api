@@ -2,7 +2,7 @@ import Album from './album'
 
 /**
  * @author Rúben Gomes <gomesrube21@gmail.com>
- * @classDesc Spotify Api class
+ * @class Spotify
  *
  * @param {object} opts Specifies the options for spotify class
  * @param {string} opts.token Specifies the spotify token to use

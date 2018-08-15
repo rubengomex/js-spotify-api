@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 /**
+ * @class SpotifyRequest
  * @private
  */
 export default class SpotifyRequest {

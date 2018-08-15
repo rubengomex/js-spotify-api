@@ -1,6 +1,8 @@
 import SpotifyRequest from '../request'
 
 /**
+ * @class Album
+ * @extends SpotifyRequest
  * @private
  */
 export default class Album extends SpotifyRequest {

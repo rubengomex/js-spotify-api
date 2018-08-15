@@ -1,27 +1,20 @@
 {
   "tags": {
     "allowUnknownTags": true,
-    "dictionaries": [
-      "jsdoc"
-    ]
+    "dictionaries": ["jsdoc"]
   },
   "source": {
-    "include": [
-      "src"
-    ],
+    "include": ["src"],
     "includePattern": ".js$",
     "excludePattern": "(node_modules/)"
   },
-  "plugins": [
-    "plugins/markdown",
-    "plugins/summarize"
-  ],
+  "plugins": ["plugins/markdown", "plugins/summarize"],
   "templates": {
     "cleverLinks": true,
     "monospaceLinks": false,
-    "systemName": "Tim-resource",
+    "systemName": "JsSpotifyApi",
     "footer": "",
-    "copyright": "Copyright © Timewax",
+    "copyright": "Copyright © Rúben Gomes",
     "includeDate": true,
     "navType": "vertical",
     "theme": "paper",
