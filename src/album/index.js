@@ -12,7 +12,9 @@ export default class Album extends SpotifyRequest {
   }
 
   find({ ids }) {
-    return this.request({ method: 'get', url: this.url, query: { ids } }).then(({ albums }) => albums)
+    return this.request({ method: 'get', url: this.url, query: { ids } }).then(
+      ({ albums }) => albums
+    )
   }
 
   findOne({ id }) {
@@ -20,6 +22,10 @@ export default class Album extends SpotifyRequest {
   }
 
   getTracks({ id, skip, limit }) {
-    return this.request({ method: 'get', url: `${this.url}/${id}/tracks`, query: { skip, limit } }).then(({ items }) => items)
+    return this.request({
+      method: 'get',
+      url: `${this.url}/${id}/tracks`,
+      query: { skip, limit }
+    }).then(({ items }) => items)
   }
 }

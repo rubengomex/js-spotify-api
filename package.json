@@ -2,10 +2,10 @@
   "name": "js-spotify-api",
   "version": "0.0.0-development",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=8"
   },
   "description": "A javascript wrapper for Spotify's Web API",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clear": "rimraf lib",
     "clean:docs": "rimraf docs",
