@@ -26,7 +26,6 @@
     "coverage": "npm run test:coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "commit": "npx git-cz",
     "prepush": " npm run test:coverage && npm run lint",
-    "deploy:docs": "git subtree push --prefix docs origin gh-pages",
     "travis-deploy-once": " npx travis-deploy-once",
     "semantic-release": "npx semantic-release"
   },
