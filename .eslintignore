@@ -3,5 +3,4 @@ docs/
 coverage/
 dist/
 lib/
-test/
-!test/configuration.js
+test/**/*test.js

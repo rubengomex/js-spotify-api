@@ -1,6 +1,7 @@
 module.exports = {
   root: true,
   env: {
+    es6: true,
     node: true,
     mocha: true
   },
@@ -8,6 +9,7 @@ module.exports = {
   extends: 'standard',
   parser: 'babel-eslint',
   parserOptions: {
+    ecmaVersion: 2018,
     sourceType: 'module'
   },
   plugins: ['mocha'],

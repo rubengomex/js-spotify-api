@@ -1,12 +1,11 @@
-const chai = require('chai')
-const { expect, should } = require('chai')
-const sinon = require('sinon')
-const sinonChai = require('sinon-chai')
-const chaiPromise = require('chai-as-promised')
+import chai from 'chai'
+import sinon from 'sinon'
+import sinonChai from 'sinon-chai'
+import chaiPromise from 'chai-as-promised'
 
-global.expect = expect
+global.expect = chai.expect
 global.sinon = sinon
 
-should()
+chai.should()
 chai.use(sinonChai)
 chai.use(chaiPromise)

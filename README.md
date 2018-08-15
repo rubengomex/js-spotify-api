@@ -25,6 +25,7 @@ A javascript wrapper for [Spotify's Web API](https://developer.spotify.com/web-a
 - [Installation](#installation)
 - [Usage](#usage)
 - [Api](#api)
+- [Development](#development)
 
 ## Features
 
@@ -313,3 +314,7 @@ Tracks
 ```
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)>>** The album tracks information
+
+## Development
+
+See something you think can be improved? Please [open an issue](https://github.com/rubengomex/js-spotify-api/issues/new) for that 😎
