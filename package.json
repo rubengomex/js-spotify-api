@@ -5,7 +5,7 @@
     "node": ">=6.0.0"
   },
   "description": "A javascript wrapper for Spotify's Web API",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "clear": "rimraf lib",
     "clean:docs": "rimraf docs",
