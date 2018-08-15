@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Tim-resource Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.paper.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">Tim-resource</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module.exports.html">module.exports</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#getAlbum">getAlbum</a></li><li><a href="global.html#getAlbums">getAlbums</a></li><li><a href="global.html#getAlbumTracks">getAlbumTracks</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h1>JS Spotify API</h1><p><a href="https://rubengomex.github.io/js-spotify-api/"><img src="http://inch-ci.org/github/rubengomex/js-spotify-api.svg?branch=master" alt="docs"></a><br><a href="https://travis-ci.org/rubengomex/js-spotify-api"><img src="https://img.shields.io/travis/rubengomex/js-spotify-api.svg" alt="travis build"></a><br><a href="https://codecov.io/gh/rubengomex/js-spotify-api"><img src="https://img.shields.io/codecov/c/github/rubengomex/js-spotify-api.svg" alt="codecov coverage"></a><br><a href="https://codeclimate.com/github/rubengomex/js-spotify-api/maintainability"><img src="https://api.codeclimate.com/v1/badges/a30f3e3286b4c0406f5f/maintainability" alt="Maintainability"></a><br><a href="https://npm-stat.com/charts.html?package=js-spotify-api&amp;from=2017-08-11"><img src="https://img.shields.io/npm/dm/js-spotify-api.svg" alt="downloads"></a><br><a href="https://nodejs.org"><img src="https://img.shields.io/node/v/js-spotify-api.svg" alt="node version"></a><br><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/rubengomex/js-spotify-api.svg" alt="MIT Licence"></a></p>
+<p><a href="https://npm.im/js-spotify-api"><img src="https://nodei.co/npm/js-spotify-api.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
+<p>A javascript wrapper for <a href="https://developer.spotify.com/web-api/">Spotify's Web API</a>.</p>
+<h2>Browser Support</h2><table>
+<thead>
+<tr>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge"></th>
+<th><img src="https://raw.github.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="IE"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>67+ ✔</td>
+<td>52+ ✔</td>
+<td>16+ ✔</td>
+<td>54+ ✔</td>
+<td>16+ ✔</td>
+<td>11 ✔</td>
+</tr>
+</tbody>
+</table>
+<h2>Table of Contents</h2><ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#api">Api</a></li>
+<li><a href="#development">Development</a></li>
+</ul>
+<h2>Features</h2><p>The library includes helper functions to do the following:</p>
+<blockquote>
+<p><strong>Note:</strong> Most of them are still in progress to make (sections marked with TODO)</p>
+</blockquote>
+<h4>Music metadata</h4><ul>
+<li>Albums, artists, and tracks</li>
+<li>Audio features and analysis for tracks (<strong>todo</strong>)</li>
+<li>Albums for a specific artist <strong>todo</strong></li>
+<li>Top tracks for a specific artist <strong>todo</strong></li>
+<li>Artists similar to a specific artist <strong>todo</strong></li>
+</ul>
+<h4>Profiles <strong>todo</strong></h4><ul>
+<li>User's emails, product type, display name, birthdate, image</li>
+</ul>
+<h4>Search</h4><ul>
+<li>albums</li>
+<li>artists, tracks, and playlists (<strong>todo</strong>)</li>
+</ul>
+<h4>Playlist manipulation (<strong>todo</strong>)</h4><ul>
+<li>Get a user's playlists</li>
+<li>Create playlists</li>
+<li>Change playlist details</li>
+<li>Add tracks to a playlist</li>
+<li>Remove tracks from a playlist</li>
+<li>Replace tracks in a playlist</li>
+<li>Reorder tracks in a playlist</li>
+</ul>
+<h4>Your Music library (<strong>todo</strong>)</h4><ul>
+<li>Add, remove, and get tracks and albums that are in the signed in user's Your Music library</li>
+<li>Check if a track or album is in the signed in user's Your Music library</li>
+</ul>
+<h4>Personalization (<strong>todo</strong>)</h4><ul>
+<li>Get a user’s top artists and tracks based on calculated affinity</li>
+</ul>
+<h4>Browse (<strong>todo</strong>)</h4><ul>
+<li>Get New Releases</li>
+<li>Get Featured Playlists</li>
+<li>Get a List of Categories</li>
+<li>Get a Category</li>
+<li>Get a Category's Playlists</li>
+<li>Get recommendations based on seeds</li>
+<li>Get available genre seeds</li>
+</ul>
+<h4>Follow (<strong>todo</strong>)</h4><ul>
+<li>Follow and unfollow users</li>
+<li>Follow and unfollow artists</li>
+<li>Check if the logged in user follows a user or artist</li>
+<li>Follow a playlist</li>
+<li>Unfollow a playlist</li>
+<li>Get followed artists</li>
+<li>Check if users are following a Playlist</li>
+</ul>
+<h4>Player (<strong>todo</strong>)</h4><ul>
+<li>Get a user's available devices</li>
+<li>Get information about the user's current playback</li>
+<li>Get current user’s recently played tracks</li>
+<li>Transfer a user's playback</li>
+<li>Resume a user's playback</li>
+<li>Skip a user's playback to next track</li>
+<li>Skip a user's playback to previous track</li>
+<li>Set a user's shuffle mode</li>
+<li>Set a user's repeat mode</li>
+<li>Set volume</li>
+<li>Seek playback to a given position</li>
+</ul>
+<p>All methods require authentication, which can be done using these flows:</p>
+<ul>
+<li><a href="http://tools.ietf.org/html/rfc6749#section-4.4">Client credentials flow</a> (Application-only authentication)</li>
+<li><a href="http://tools.ietf.org/html/rfc6749#section-4.1">Authorization code grant</a> (Signed by user)</li>
+</ul>
+<h2>Dependencies</h2><ul>
+<li><p>To use this library you will need a node version <code>&gt;= 6.0.0</code>.</p>
+</li>
+<li><p>Download one of the follows <code>Node Version Managers</code> to manage the node versions easily:</p>
+<ul>
+<li><a href="https://github.com/creationix/nvm/blob/master/README.md">nvm</a></li>
+<li><a href="https://github.com/tj/n">n</a></li>
+</ul>
+</li>
+</ul>
+<h2>Installation</h2><p>From npm</p>
+<pre class="prettyprint source lang-bash"><code>$ npm i -S js-spotify-api</code></pre><p>From git</p>
+<pre class="prettyprint source lang-bash"><code>    $ git clone https://github.com/rubengomex/js-spotify-api.git
+    $ cd js-spotify-api
+    $ npm i</code></pre><h2>Tests</h2><p>You can run the tests by running the follow command:</p>
+<pre class="prettyprint source lang-bash"><code>    $ npm t</code></pre><blockquote>
+<p><strong>Note:</strong> You only can run the tests if you clone the repository from github</p>
+</blockquote>
+<h2>Usage</h2><h3>ES6</h3><pre class="prettyprint source lang-js"><code>// to import a specific method
+import Spotify from 'js-spotify-api'
+
+const spotify = new Spotify({
+  token: 'YOUR_TOKEN_HERE'
+})
+
+// using  method
+spotify.getArtists({ band: 'Incubus' }).then(artists => console.log(artists))</code></pre><h3>CommonJS</h3><pre class="prettyprint source lang-js"><code>const Spotify = require('js-spotify-api')
+
+const spotify = new Spotify({
+  token: 'YOUR_TOKEN_HERE'
+})</code></pre><h3>UMD in Browser</h3><pre class="prettyprint source lang-html"><code>&lt;!-- to import non-minified version -->
+&lt;script src=&quot;js-spotify-api.umd.js&quot;>&lt;/script>
+
+&lt;!-- to import minified version -->
+&lt;script src=&quot;js-spotify-api.umd.min.js&quot;>&lt;/script></code></pre><p>After that the library will be available to the Global as <code>Spotify</code>. Follow an example:</p>
+<pre class="prettyprint source lang-js"><code>const spotify = new Spotify({
+  token: 'YOUR_TOKEN_HERE'
+})
+
+let albums
+spotify
+  .getAlbums({ artist: 'Chosen artist' })
+  .then(albumsFromArtists => (albums = albumsFromArtists))
+  .catch(err => console.log(err))
+
+console.log(albums)
+
+// Want to use async/await? Add the `async` keyword to your outer function/method.
+async function getUser() {
+  try {
+    const response = await spotify.getAlbums({ artists: 'Chosen artist' })
+    console.log(response)
+  } catch (error) {
+    console.error(error)
+  }
+}</code></pre><blockquote>
+<p><strong>NOTE:</strong> <code>async/await</code> is part of ECMAScript 2017 and is not supported in Internet<br>Explorer and older browsers, so use with caution.</p>
+</blockquote>
+<h2>API</h2><!-- Generated by documentation.js. Update this documentation by updating the source code. -->
+<h4>Table of Contents</h4><ul>
+<li><a href="#spotify">Spotify</a><ul>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#getalbums">getAlbums</a><ul>
+<li><a href="#parameters-1">Parameters</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a href="#getalbum">getAlbum</a><ul>
+<li><a href="#parameters-2">Parameters</a></li>
+<li><a href="#examples-1">Examples</a></li>
+</ul>
+</li>
+<li><a href="#getalbumtracks">getAlbumTracks</a><ul>
+<li><a href="#parameters-3">Parameters</a></li>
+<li><a href="#examples-2">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Spotify</h3><h4>Parameters</h4><ul>
+<li><code>opts</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> Specifies the options for spotify class<ul>
+<li><code>opts.token</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Specifies the spotify token to use</li>
+</ul>
+</li>
+</ul>
+<p><strong>Meta</strong></p>
+<ul>
+<li><strong>author</strong>: Rúben Gomes &lt;<a href="mailto:gomesrube21@gmail.com">gomesrube21@gmail.com</a>&gt;</li>
+</ul>
+<h4>getAlbums</h4><p>Gets albums info based on albums ids specified</p>
+<h5>Parameters</h5><ul>
+<li><code>opts</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> Specifies the options object<ul>
+<li><code>opts.ids</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>&gt;</strong> Specifies the spotify albums ids</li>
+</ul>
+</li>
+</ul>
+<h5>Examples</h5><pre class="prettyprint source lang-javascript"><code>Albums
+[{
+   album_type: 'album',
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   external_ids: { upc: '886445352382' },
+   external_urls: { spotify: 'https://open.spotify.com/album/{albumId}'}
+   ...
+}]</code></pre><p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>&gt;&gt;</strong> The albums information</p>
+<h4>getAlbum</h4><p>Gets album info based on the id of the album</p>
+<h5>Parameters</h5><ul>
+<li><code>opts</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> Specifies the options object<ul>
+<li><code>opts.id</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Specifies the spotify album id</li>
+</ul>
+</li>
+</ul>
+<h5>Examples</h5><pre class="prettyprint source lang-javascript"><code>Album
+{
+   album_type: 'album',
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   external_ids: { upc: '886445352382' },
+   external_urls: { spotify: 'https://open.spotify.com/album/{albumId}'}
+   ...
+}</code></pre><p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>&gt;</strong> The album information</p>
+<h4>getAlbumTracks</h4><p>Gets the tracks of the album info based on the id of the album</p>
+<h5>Parameters</h5><ul>
+<li><code>opts</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></strong> Specifies the options object<ul>
+<li><code>opts.id</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></strong> Specifies the spotify album id</li>
+<li><code>opts.skip</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> Specifies the offset of the items to retrieve (optional, default <code>0</code>)</li>
+<li><code>opts.limit</code> <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></strong> Specifies the limit of items to retrieve (optional, default <code>20</code>)</li>
+</ul>
+</li>
+</ul>
+<h5>Examples</h5><pre class="prettyprint source lang-javascript"><code>Tracks
+[{
+   artists: [ [Object] ],
+   available_markets: ['AD', 'EC', 'PT', ...],
+   copyrights: [ [Object] ],
+   disc_number: 1,
+   track_number: 1
+   ...
+}]</code></pre><p>Returns <strong><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&lt;<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>&gt;&gt;</strong> The album tracks information</p>
+<h2>Development</h2><p>See something you think can be improved? Please <a href="https://github.com/rubengomex/js-spotify-api/issues/new">open an issue</a> for that 😎</p></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+	<span class="copyright">
+	Copyright © Timewax
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on Wed Aug 15th 2018
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+<script>
+	$( function () {
+		$( '#main' ).localScroll( {
+			offset : { top : 60 } //offset by the height of your header (give or take a few px, see what works for you)
+		} );
+		$( "dt.name" ).each( function () {
+			var $this = $( this ).find("h4");
+			var icon = $( "<i/>" ).addClass( "icon-plus-sign" ).addClass( "pull-right" ).addClass( "icon-white" );
+			var dt = $(this);
+			var children = dt.next( "dd" );
+
+			dt.prepend( icon ).css( {cursor : "pointer"} );
+			dt.addClass( "member-collapsed" ).addClass( "member" );
+
+
+			children.hide();
+
+			dt.children().on( "click", function () {
+				children = dt.next( "dd" );
+				children.slideToggle( "fast", function () {
+
+					if ( children.is( ":visible" ) ) {
+						icon.addClass( "icon-minus-sign" ).removeClass( "icon-plus-sign" ).removeClass( "icon-white" );
+						dt.addClass( "member-open" ).animate( "member-collapsed" );
+					} else {
+						icon.addClass( "icon-plus-sign" ).removeClass( "icon-minus-sign" ).addClass( "icon-white" );
+						dt.addClass( "member-collapsed" ).removeClass( "member-open" );
+					}
+				} );
+			} );
+
+		} );
+	} );
+</script>
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>

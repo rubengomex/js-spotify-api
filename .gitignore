@@ -6,7 +6,7 @@ dist
 lib
 
 # docs
-docs
+# docs
 # IntelliJ
 .idea
 
